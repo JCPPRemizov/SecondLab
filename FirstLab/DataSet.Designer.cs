@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FirstLab {
+namespace SecondLab {
     
     
     /// <summary>
@@ -1090,7 +1090,7 @@ namespace FirstLab {
         }
     }
 }
-namespace FirstLab.DataSetTableAdapters {
+namespace SecondLab.DataSetTableAdapters {
     
     
     /// <summary>
@@ -1246,7 +1246,7 @@ namespace FirstLab.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FirstLab.Properties.Settings.Default.my_baseConnectionString;
+            this._connection.ConnectionString = global::SecondLab.Properties.Settings.Default.my_baseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1609,7 +1609,7 @@ SELECT zavod_id, name, specialization, income FROM zavod WHERE (zavod_id = @zavo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::FirstLab.Properties.Settings.Default.my_baseConnectionString;
+            this._connection.ConnectionString = global::SecondLab.Properties.Settings.Default.my_baseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

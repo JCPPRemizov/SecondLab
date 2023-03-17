@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="my_baseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="my_baseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FirstLab.Properties.Settings.GlobalReference.Default.my_baseConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="my_baseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="my_baseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SecondLab.Properties.Settings.GlobalReference.Default.my_baseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="specializationsTableAdapter" GeneratorDataComponentClassName="specializationsTableAdapter" Name="specializations" UserDataComponentName="specializationsTableAdapter">
@@ -186,7 +186,7 @@ SELECT zavod_id, name, specialization, income FROM zavod WHERE (zavod_id = @zavo
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__zavod__specializ__398D8EEE" msdata:parent="specializations" msdata:child="zavod" msdata:parentkey="specialization_id" msdata:childkey="specialization" msprop:Generator_UserParentTable="specializations" msprop:Generator_UserChildTable="zavod" msprop:Generator_RelationVarName="relationFK__zavod__specializ__398D8EEE" msprop:Generator_ChildPropName="GetzavodRows" msprop:Generator_ParentPropName="specializationsRow" msprop:Generator_UserRelationName="FK__zavod__specializ__398D8EEE" />
+      <msdata:Relationship name="FK__zavod__specializ__398D8EEE" msdata:parent="specializations" msdata:child="zavod" msdata:parentkey="specialization_id" msdata:childkey="specialization" msprop:Generator_UserParentTable="specializations" msprop:Generator_UserChildTable="zavod" msprop:Generator_RelationVarName="relationFK__zavod__specializ__398D8EEE" msprop:Generator_ChildPropName="GetzavodRows" msprop:Generator_UserRelationName="FK__zavod__specializ__398D8EEE" msprop:Generator_ParentPropName="specializationsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -1,4 +1,4 @@
-﻿namespace FirstLab
+﻿namespace SecondLab
 {
 
 
