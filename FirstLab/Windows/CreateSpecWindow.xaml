@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SecondLab"
         mc:Ignorable="d"
-        Title="CreateSpecWindow" Height="250" Width="300">
+        Title="CreateSpecWindow" Height="250" Width="300" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="54*"/>

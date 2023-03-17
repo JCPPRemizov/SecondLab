@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SecondLab.Windows"
         mc:Ignorable="d"
-        Title="CreateZavodWindow" Height="450" Width="450">
+        Title="CreateZavodWindow" Height="450" Width="450" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="55*"/>
