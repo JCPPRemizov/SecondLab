@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\CPRJ\CSharpLes\Lab\FirstLab\FirstLab\obj\Debug\
+D:\CPRJ\SecondLab\FirstLab\obj\Debug\
 FirstLab
 none
 false
 DEBUG;TRACE
-D:\CPRJ\CSharpLes\Lab\FirstLab\FirstLab\App.xaml
-51107482176
+D:\CPRJ\SecondLab\FirstLab\App.xaml
+3-356924250
 
-121730811232
+10510326314
 13-38814620
-CreateSpecWindow.xaml;CreateZavodWindow.xaml;FirstPage.xaml;MainWindow.xaml;SecondPage.xaml;
+Windows\CreateSpecWindow.xaml;MainWindow.xaml;Windows\CreateZavodWindow.xaml;
 
 True
 

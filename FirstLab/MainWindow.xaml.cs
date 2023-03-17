@@ -1,10 +1,16 @@
 ﻿
+using SecondLab.DataSetTableAdapters;
+using SecondLab.Windows;
 using System;
+using System.Collections;
 using System.ComponentModel;
+using System.Data;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FirstLab
+namespace SecondLab
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -12,53 +18,62 @@ namespace FirstLab
 
     public partial class MainWindow : Window
     {
-        readonly public static Page[] pages =
-        {
-            new FirstPage(), new SecondPage()
-        };
         private int x = 0;
+        private CreateSpecWindow specWindow = new CreateSpecWindow();
+        private CreateZavodWindow zavodWindow = new CreateZavodWindow();
+        DataTable[] tables =
+        {
+            new specializationsTableAdapter().GetData(),
+            new zavodTableAdapter().GetData()
+        };
+
         public MainWindow()
         {
             InitializeComponent();
-            PageFrame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
-            ReturnButton.IsEnabled= false;
-            PageFrame.Content = pages[0];
+            MainDataGrid.ItemsSource = tables[0] as IEnumerable;
+            specWindow.mainWindow = this;
+            zavodWindow.mainWindow = this;
+
+        }
+        private void backStep()
+        {
+            if (x > 0)
+            {
+                x--;
+                MainDataGrid.ItemsSource = tables[x] as IEnumerable;
+            }
+        }
+        private void nextStep()
+        {
+            if (x < tables.Length - 1)
+            {
+                x++;
+                MainDataGrid.ItemsSource = tables[x] as IEnumerable;
+            }
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            x++;
-            PageFrame.Content = pages[x];
-            ReturnButton.IsEnabled = true;
-            if (x <= pages.Length - 1)
-            {
-                NextButton.IsEnabled = false;
-            }
-
+            nextStep();
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
-            x--;
-            NextButton.IsEnabled = true;
-            PageFrame.Content = pages[x];
-            if (x < 1)
-            {
-                ReturnButton.IsEnabled = false;
-            }
+            backStep();
         }
        
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-            if (PageFrame.Content == pages[1])
-            {
-                new CreateZavodWindow().Show();
-            }   
-            else if (PageFrame.Content == pages[0]) 
-            {
-                new CreateSpecWindow().Show(); 
-            }
+            if (MainDataGrid.ItemsSource == tables[0])
+                specWindow.Show();
+            else if (MainDataGrid.ItemsSource == tables[1])
+                zavodWindow.Show();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
