@@ -31,6 +31,7 @@ namespace SecondLab.Windows
                 if (int.TryParse(IncomeTextBox.Text, out int income))
                 {
                     zavodTableAdapter.InsertZavod(NameTextBox.Text, TypeOfZavodBox.SelectedIndex + 1, income);
+                    MessageBox.Show("Завод добавлен!", "Успех");
                     UpdateDataGrid();
                 }
                 else
